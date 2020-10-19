@@ -1,0 +1,26 @@
+.top-toolbar {
+    height: 64px;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    z-index: 1000; 
+}
+
+.toolbar-buttons {
+    margin-left: 20px;
+    margin-top: 7px;
+}
+
+.search-input {
+    height: 25px;
+    width: 100%;
+    margin-left: 53px;
+}
+
+.button-container > button {
+    margin-left: 20px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}

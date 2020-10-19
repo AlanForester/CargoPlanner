@@ -1,0 +1,26 @@
+.sidenav-content {
+	display: block;
+	padding-left: 280px;
+	margin-top: 80px;
+}
+
+.logs {
+	padding-left: 280px;
+}
+
+.sidenav {
+	background-color: #0747a6; 
+	margin-top: 64px;
+}
+.active {
+	background-color: rgba(9, 30, 66, 0.25);
+}
+
+.sidenav-item {
+	color: white;
+	font-size: 20px;
+}
+
+mat-icon {
+	color: white;
+}

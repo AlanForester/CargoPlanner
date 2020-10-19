@@ -1,0 +1,36 @@
+<mat-sidenav-container fullscreen>
+	<mat-sidenav
+		#sidenav
+		mode="side"
+		class="sidenav"
+		opened="true"
+	>
+		<mat-nav-list>
+			<mat-list-item *ngIf="localData != null && (localData | filter:filter ) <1" style="width: 240px;">
+				<mat-icon mat-list-icon>warning</mat-icon>
+				<div class="sidenav-item">
+					<h4>Not Found</h4>
+				</div>
+			</mat-list-item>
+			<mat-list-item 
+			style="width: 240px; display: block;"
+			*ngFor="let shipment of (localData | filter:filter )" 
+			[routerLink]="['/shipment', shipment.id]"
+			(click)="onSelect(shipment)">
+			
+				<mat-icon mat-list-icon>link</mat-icon>
+				<div class="sidenav-item">
+					<h5>{{shipment.name}}</h5>
+				</div> 
+			</mat-list-item>
+		</mat-nav-list>
+	</mat-sidenav>
+	<div class="sidenav-content top-margin">
+
+		<router-outlet></router-outlet>
+		
+	</div>
+	<div class="logs">
+		<app-messages></app-messages>
+	</div>
+</mat-sidenav-container>

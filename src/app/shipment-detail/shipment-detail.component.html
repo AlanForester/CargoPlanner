@@ -1,0 +1,17 @@
+<div *ngIf="shipment" >
+
+    <h1>{{ shipment.name }}</h1>
+    <a href="mailto:{{shipment.email}}">{{shipment.email}}</a>
+    <br>
+    <br>
+    <div>
+      <label>Number of required cargo bays <b>{{bays}}</b>
+      </label>
+    </div>
+    <br>
+    Cargo boxes
+    <div>
+        <input type="text" style="width: 400px; height: 25px;"  (keyup)="calculateBays($event.target.value)" [value]="shipment.boxes"/>
+        <!-- {{boxes}} -->
+    </div>
+</div>  

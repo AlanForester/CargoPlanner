@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Confirm loading data</h1>
+<div mat-dialog-content>
+  <p>You doesnt have local shipment data. Download shipment data over network?</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button (click)="onYesClick()" cdkFocusInitial>Download</button>
+</div>

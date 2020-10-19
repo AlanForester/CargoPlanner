@@ -1,0 +1,21 @@
+<mat-toolbar color="primary" class="top-toolbar">
+   
+    <span style="margin-left: 40px;">Cargo Planner</span>
+    <span class="spacer"></span>
+
+    <input class="search-input"  (keyup)="find($event.target.value)" placeholder="Search">
+   
+    <div class="toolbar-buttons">
+        <div class="button-container">
+            <button mat-raised-button color="basic" (click)="load()">
+                Load
+              <mat-icon>cloud_upload</mat-icon>
+            </button>
+            <button mat-raised-button color="basic" (click)="save()">
+                Save
+              <mat-icon>sd_storage</mat-icon>
+            </button>
+          </div>
+          <mat-action-list></mat-action-list>
+    </div>
+  </mat-toolbar> 
